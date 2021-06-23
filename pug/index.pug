@@ -1,0 +1,60 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Бесплатный онлайн-семинар
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://int-traf.ru/humane-libnotify.css">
+    link(rel="stylesheet", href="css/style.css")
+  body 
+
+    // welcome
+    section.welcome
+      .welcome__row 
+        .welcome__img 
+            img(src="img/boy-1-v8.jpg", alt="")
+        .welcome__content
+          .welcome__text Бесплатный онлайн-семинар
+          h1.welcome__title КАК С НУЛЯ <br>БЫСТРО ЗАГОВОРИТЬ<br>
+            span НА АНГЛИЙСКОМ?
+          .welcome__desc 
+            span СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»  
+          ul.welcome__list
+            li 
+              .welcome__icon
+                img(src="img/flag.png", alt="") 
+              span Узнаете, как правильно учить язык простому человеку, а не лингвисту
+            li
+              .welcome__icon
+                img(src="img/bigben.png", alt="")
+              span Разберете 30 грамматических "кирпичей", из которых состоит весь английский
+            li
+              .welcome__icon
+                img(src="img/sherlock.png", alt="")
+              span Прямо на семинаре выучите все 16 времен английского языка
+            li 
+              .welcome__icon
+              span И еще 7 суперважных тем! 
+                strong Участвуйте бесплатно ↓
+          .welcome__blockbtn 
+            p Уже зарегистрировались 
+              span.count-number(data-val-up="0" data-val-to="317" data-duration="1000") 0
+              |  человек
+            button.welcome__btn
+              i.fa.fa-arrow-right
+              span ПРИНЯТЬ УЧАСТИЕ
+          .welcome__policy
+            p Этот сайт не является частью сайта Facebook или Facebook, inc. Кроме того, этот сайт никаким образом не одобрен Facebook. FACEBOOK является торговой маркой FACEBOOK, INC
+            p ИП Семилетко Алексей Борисович ОГРН 317420500014963. Телефон: +7.932.33.70.500, email: web@english-webinar.ru
+            p
+              a(href="#") Политика конфиденциальности
+    //	/welcome
+    
+    .humane-libnotify
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://int-traf.ru/humane.js?v=1")
+    script(src="js/scripts.js") 
