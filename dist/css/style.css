@@ -434,6 +434,16 @@ body {
     .modal__policy a {
       border-bottom: 1px dashed #333;
       color: #333; }
+  .modal__typotext {
+    font-size: 16px; }
+    .modal__typotext p {
+      padding-bottom: 30px; }
+    .modal__typotext ul {
+      list-style: disc;
+      padding-left: 40px;
+      padding-bottom: 30px; }
+  .modal--widht .modal__body {
+    max-width: 620px; }
 
 .user {
   padding: 5px;
