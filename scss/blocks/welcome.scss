@@ -33,9 +33,9 @@
     font-size: 2.64vw;
     font-weight: 700;
     text-align: center;
-    span {
-      text-decoration: underline;
-    }
+  }
+  &__underline {
+    text-decoration: underline;
   }
   &__desc {
     text-align: center;
@@ -55,7 +55,7 @@
       position: relative;
     }
     strong {
-      font-weight: 700;
+      font-weight: 600;
     }
     span {
       display: block;
@@ -75,7 +75,7 @@
   }
   &__blockbtn  {
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 5px;
     p {
       margin-bottom: 10px;
@@ -95,6 +95,20 @@
       margin-right: 11px;
       font-size: 27px;
     }
+    &--form {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      .fa {
+        font-size: 23px;
+      }
+    }
+    &:hover {
+      background-color: #f4c700;
+      border-color: #ad8e00;
+      color: #002957;
+    }
   }
   &__policy {
     font-size: 8px;
@@ -107,6 +121,60 @@
       font-size: 9px;
       color: #fff;
       text-decoration: underline;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__row {
+      justify-content: center;
+    }
+    &__img {
+      display: none;
+    }
+    &__content {
+      width: 100%;
+      max-width: 767px;
+      padding: 15px 0;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    &__desc {
+      
+    }
+    &__list {
+      padding: 15px 10px;
+      font-weight: 600;
+      strong {
+        font-weight: normal;
+      }
+      span {
+        display: block;
+        padding: 12px 0 12px 10px;
+      }
+    }
+    &__blockbtn {
+      font-size: 16px;
+      font-weight: 600;
+      span {
+        
+      }
+    }
+    &__mobiletext {
+      padding: 15px 0 20px;
+    }
+    &__btn {
+      padding: 10px 20px;
+      font-size: 19px;
+      .fa {
+        font-size: 25px;
+      }
+    }
+    &__policy {
+      padding-top: 80px;
+      span {
+        padding: 5px 0;
+        display: block;
+      }
     }
   }
 }

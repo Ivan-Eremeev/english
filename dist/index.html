@@ -16,8 +16,8 @@
 				<div class="welcome__img"> <img src="img/boy-1-v8.jpg" alt=""></div>
 				<div class="welcome__content">
 					<div class="welcome__text">Бесплатный онлайн-семинар</div>
-					<h1 class="welcome__title">КАК С НУЛЯ <br>БЫСТРО ЗАГОВОРИТЬ<br><span>НА АНГЛИЙСКОМ?</span></h1>
-					<div class="welcome__desc"> <span>СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»  </span></div>
+					<h1 class="welcome__title"> <span class="mobile-hide">КАК С НУЛЯ <br>БЫСТРО ЗАГОВОРИТЬ<br><span class="welcome__underline">НА АНГЛИЙСКОМ?</span></span><span class="mobile-visible">КАК С НУЛЯ <br>БЫСТРО <br>ЗАГОВОРИТЬ<br><span class="welcome__underline">НА АНГЛИЙСКОМ?</span></span></h1>
+					<div class="welcome__desc"> <span class="mobile-hide">СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»</span><span class="mobile-visible">СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА <br>ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»</span></div>
 					<ul class="welcome__list">
 						<li> 
 							<div class="welcome__icon"><img src="img/flag.png" alt=""></div><span>Узнаете, как правильно учить язык простому человеку, а не лингвисту</span>
@@ -29,25 +29,100 @@
 							<div class="welcome__icon"><img src="img/sherlock.png" alt=""></div><span>Прямо на семинаре выучите все 16 времен английского языка</span>
 						</li>
 						<li> 
-							<div class="welcome__icon"></div><span>И еще 7 суперважных тем! <strong>Участвуйте бесплатно ↓</strong></span>
+							<div class="welcome__icon"></div>
+							<p class="mobile-hide"><span>И еще 7 суперважных тем! <strong>Участвуйте бесплатно ↓</strong></span></p><span class="mobile-visible">...и еще 7 суперважных тем! </span>
 						</li>
 					</ul>
-					<div class="welcome__blockbtn"> 
-						<p>Уже зарегистрировались <span class="count-number" data-val-up="0" data-val-to="317" data-duration="1000">0</span> человек</p>
-						<button class="welcome__btn"><i class="fa fa-arrow-right"></i><span>ПРИНЯТЬ УЧАСТИЕ</span></button>
+					<!-- user-->
+					<div class="user mobile-visible">
+						<div class="user__row">
+							<div class="user__avatar"> <img src="img/avatar.png" alt=""></div>
+							<div class="user__content"> 
+								<div class="user__title"> 
+									<p>СЕМИНАР ВЕДЕТ</p>
+									<p>СЕРГЕЙ СЕРДЮКОВ</p>
+								</div>
+								<div class="user__text">
+									<p>ДИРЕКТОР ШКОЛЫ АНГЛИЙСКОГО ЯЗЫКА</p>
+									<p>1.5 ГОДА ЖИЛ И РАБОТАЛ В АНГЛИИ</p>
+									<p>ОБУЧАЕТ АНГЛИЙСКОМУ БОЛЕЕ 10 ЛЕТ</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="welcome__policy">
+					<!--	/user-->
+					<div class="welcome__blockbtn"> 
+						<div class="welcome__mobiletext mobile-visible">Участвуйте бесплатно ↓</div>
+						<p class="mobile-hide">Уже зарегистрировались <span class="count-number" data-val-up="0" data-val-to="317" data-duration="2000">317</span> человек</p>
+						<p class="mobile-visible">Уже зарегистрировались <br><span class="count-number" data-val-up="0" data-val-to="317" data-duration="2000">317</span> человек</p>
+						<button class="welcome__btn modal-trigger" data-modal="#modal-form"><i class="fa fa-arrow-right"></i><span>ПРИНЯТЬ УЧАСТИЕ</span></button>
+					</div>
+					<div class="welcome__policy mobile-hide">
 						<p>Этот сайт не является частью сайта Facebook или Facebook, inc. Кроме того, этот сайт никаким образом не одобрен Facebook. FACEBOOK является торговой маркой FACEBOOK, INC</p>
 						<p>ИП Семилетко Алексей Борисович ОГРН 317420500014963. Телефон: +7.932.33.70.500, email: web@english-webinar.ru</p>
+						<p><a href="#">Политика конфиденциальности</a></p>
+					</div>
+					<div class="welcome__policy mobile-visible">
+						<p>Этот сайт не является частью сайта Facebook или Facebook, inc. Кроме того, этот сайт никаким образом не одобрен Facebook. FACEBOOK является торговой маркой FACEBOOK, INC</p>
+						<p>ИП Семилетко Алексей Борисович ОГРН 317420500014963.</p>
+						<p>Телефон: +7.932.33.70.500, email: web@english-webinar.ru</p>
 						<p><a href="#">Политика конфиденциальности</a></p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!--	/welcome-->
+		<!-- modal-->
+		<div class="modal" id="modal-form">
+			<div class="modal__body">
+				<div class="modal__content">
+					<div class="modal__head"> 
+						<h2>Регистрация на онлайн-семинар</h2>
+						<div class="modal__close"></div>
+					</div>
+					<form class="modal__form" action="#">
+						<h3>Участие бесплатное. Ссылка придет вам по почте и sms. Регистрируйтесь ↓</h3>
+						<div class="modal__row"> 
+							<div class="modal__label">Дата и время семинара:</div>
+							<div class="modal__input"> 
+								<input type="text">
+							</div>
+						</div>
+						<div class="modal__row"> 
+							<div class="modal__label">Введите ваше имя *</div>
+							<div class="modal__input"> 
+								<input type="text" required>
+							</div>
+						</div>
+						<div class="modal__row"> 
+							<div class="modal__label">Введите электронную почту *</div>
+							<div class="modal__input">
+								<input type="text" required>
+							</div>
+						</div>
+						<div class="modal__row"> 
+							<div class="modal__label">Телефон для смс-напоминания *</div>
+							<div class="modal__input" data-type="phone">
+								<input type="text" required>
+							</div>
+						</div>
+						<button class="welcome__btn welcome__btn--form" type="submit"><i class="fa fa-arrow-right"></i><span>ПРИНЯТЬ УЧАСТИЕ</span></button>
+						<div class="modal__policy mobile-hide">
+							<p>Нажимая кнопку "Принять участие", вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> школы "Черчилль". Вы соглашаетесь получать телефонные звонки и SMS-сообщения от школы "Черчилль" для информирования о предстоящих онлайн-мероприятиях и/или в маркетинговых целях. Частота сообщений зависит от вашей активности. Вы можете отказаться, написав сообщение "СТОП" на почту </p>
+							<p>web@english-webinar.ru.</p>
+						</div>
+						<div class="modal__policy mobile-visible">
+							<p>Нажимая кнопку, вы даете согласие на <a href="#">обработку персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /modal-->
 		<div class="humane-libnotify"></div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
 		<script src="https://int-traf.ru/humane.js?v=1"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"> </script>
 		<script src="js/scripts.js"> </script>
 	</body>
 </html>

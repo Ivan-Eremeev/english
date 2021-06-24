@@ -18,10 +18,14 @@ html(lang="ru")
             img(src="img/boy-1-v8.jpg", alt="")
         .welcome__content
           .welcome__text Бесплатный онлайн-семинар
-          h1.welcome__title КАК С НУЛЯ <br>БЫСТРО ЗАГОВОРИТЬ<br>
-            span НА АНГЛИЙСКОМ?
+          h1.welcome__title 
+            span.mobile-hide КАК С НУЛЯ <br>БЫСТРО ЗАГОВОРИТЬ<br>
+              span.welcome__underline НА АНГЛИЙСКОМ?
+            span.mobile-visible КАК С НУЛЯ <br>БЫСТРО <br>ЗАГОВОРИТЬ<br>
+              span.welcome__underline НА АНГЛИЙСКОМ?
           .welcome__desc 
-            span СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»  
+            span.mobile-hide СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»
+            span.mobile-visible СИСТЕМНОЕ ИЗУЧЕНИЕ ЯЗЫКА <br>ПО АВТОРСКОМУ МЕТОДУ «ОСТРОВ»
           ul.welcome__list
             li 
               .welcome__icon
@@ -37,24 +41,92 @@ html(lang="ru")
               span Прямо на семинаре выучите все 16 времен английского языка
             li 
               .welcome__icon
-              span И еще 7 суперважных тем! 
-                strong Участвуйте бесплатно ↓
+              p.mobile-hide
+                span И еще 7 суперважных тем! 
+                  strong Участвуйте бесплатно ↓
+              span.mobile-visible ...и еще 7 суперважных тем! 
+
+          // user
+          .user.mobile-visible
+            .user__row
+              .user__avatar 
+                img(src="img/avatar.png", alt="")
+              .user__content 
+                .user__title 
+                  p СЕМИНАР ВЕДЕТ
+                  p СЕРГЕЙ СЕРДЮКОВ
+                .user__text
+                  p ДИРЕКТОР ШКОЛЫ АНГЛИЙСКОГО ЯЗЫКА
+                  p 1.5 ГОДА ЖИЛ И РАБОТАЛ В АНГЛИИ
+                  p ОБУЧАЕТ АНГЛИЙСКОМУ БОЛЕЕ 10 ЛЕТ
+          //	/user
+
           .welcome__blockbtn 
-            p Уже зарегистрировались 
-              span.count-number(data-val-up="0" data-val-to="317" data-duration="1000") 0
+            .welcome__mobiletext.mobile-visible Участвуйте бесплатно ↓
+            p.mobile-hide Уже зарегистрировались 
+              span.count-number(data-val-up="0" data-val-to="317" data-duration="2000") 317
               |  человек
-            button.welcome__btn
+            p.mobile-visible Уже зарегистрировались <br>
+              span.count-number(data-val-up="0" data-val-to="317" data-duration="2000") 317
+              |  человек
+            button.welcome__btn.modal-trigger(data-modal="#modal-form")
               i.fa.fa-arrow-right
               span ПРИНЯТЬ УЧАСТИЕ
-          .welcome__policy
+          .welcome__policy.mobile-hide
             p Этот сайт не является частью сайта Facebook или Facebook, inc. Кроме того, этот сайт никаким образом не одобрен Facebook. FACEBOOK является торговой маркой FACEBOOK, INC
             p ИП Семилетко Алексей Борисович ОГРН 317420500014963. Телефон: +7.932.33.70.500, email: web@english-webinar.ru
             p
               a(href="#") Политика конфиденциальности
+          .welcome__policy.mobile-visible
+            p Этот сайт не является частью сайта Facebook или Facebook, inc. Кроме того, этот сайт никаким образом не одобрен Facebook. FACEBOOK является торговой маркой FACEBOOK, INC
+            p ИП Семилетко Алексей Борисович ОГРН 317420500014963.
+            p Телефон: +7.932.33.70.500, email: web@english-webinar.ru
+            p
+              a(href="#") Политика конфиденциальности
     //	/welcome
+
+    // modal
+    .modal#modal-form
+      .modal__body
+        .modal__content
+          .modal__head 
+            h2 Регистрация на онлайн-семинар
+            .modal__close
+          form(action="#").modal__form
+            h3 Участие бесплатное. Ссылка придет вам по почте и sms. Регистрируйтесь ↓
+            .modal__row 
+              .modal__label Дата и время семинара:
+              .modal__input 
+                input(type="text")
+            .modal__row 
+              .modal__label Введите ваше имя *
+              .modal__input 
+                input(type="text" required)
+            .modal__row 
+              .modal__label Введите электронную почту *
+              .modal__input
+                input(type="text" required)
+            .modal__row 
+              .modal__label Телефон для смс-напоминания *
+              .modal__input(data-type="phone")
+                input(type="text" required)
+            button(type="submit").welcome__btn.welcome__btn--form
+              i.fa.fa-arrow-right
+              span ПРИНЯТЬ УЧАСТИЕ
+            .modal__policy.mobile-hide
+              p Нажимая кнопку "Принять участие", вы соглашаетесь с 
+                a(href="#") Политикой конфиденциальности
+                |  школы "Черчилль". Вы соглашаетесь получать телефонные звонки и SMS-сообщения от школы "Черчилль" для информирования о предстоящих онлайн-мероприятиях и/или в маркетинговых целях. Частота сообщений зависит от вашей активности. Вы можете отказаться, написав сообщение "СТОП" на почту 
+              p web@english-webinar.ru.
+            .modal__policy.mobile-visible
+              p Нажимая кнопку, вы даете согласие на 
+                a(href="#") обработку персональных данных
+    // /modal
     
     .humane-libnotify
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
     script(src="https://int-traf.ru/humane.js?v=1")
+    //- script(src="https://github.com/downloads/digitalBush/jquery.maskedinput/jquery.maskedinput-1.3.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js") 
     script(src="js/scripts.js") 

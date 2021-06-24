@@ -1,45 +1,50 @@
 .modal {
-	display: none;
 	background-color: rgba(0,0,0,.5);
+	color: #333;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	overflow: auto;
-	&_body {
-		max-width: 100%;
+	visibility: hidden;
+	&__body {
+		width: 100%;
+		max-width: 420px;
 		max-height: 100%;
 		padding: 10px;
 		position: absolute;
-		top: 50%;
+		top: 0;
 		left: 50%;
-		transform: translate(-50%,-50%) scale(0, 0);
+		transform: translate(-50%,-50%);
 		opacity: 0;
-		transition: .5s;
+		transition: .3s;
 	}
-	&-content, &_content {
-		padding: 20px;
+	&__content {
 		position: relative;
 		background-color: #fff;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 50%);
+		border-radius: 6px;
 	}
-	&_close {
-		width: 20px;
-		height: 20px;
+	&__close {
+		width: 12px;
+		height: 12px;
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 50%;
+		right: 15px;
+		transform: translate(0,-50%);
 		cursor: pointer;
 		user-select: none;
 		&:after,&:before {
 			content: '';
 			display: block;
 			width: 100%;
-			height: 1px;
+			height: 2px;
 			background-color: #000;
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			opacity: 0.2;
 		}
 		&:after {
 			transform: translate(-50%,-50%) rotate(45deg);
@@ -47,11 +52,65 @@
 		&:before {
 			transform: translate(-50%,-50%) rotate(-45deg);
 		}
+		&:hover {
+			&:after,&:before {
+				opacity: 0.5;
+			}
+		}
 	}
 	&.open {
-		.modal_body {
-			transform: translate(-50%,-50%) scale(1, 1);
+		visibility: visible;
+		.modal__body {
 			opacity: 1;
+			top: 50%;
+		}
+	}
+	&__head {
+		padding: 13px 30px 13px 15px;
+		border-bottom: 1px solid #e5e5e5;
+		position: relative;
+		h2 {
+			font-weight: 600;
+		}
+	}
+	&__form {
+		padding: 20px;
+		h3 {
+			padding-bottom: 15px;
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+	&__row {
+		padding: 5px 0;
+		font-size: 16px;
+		font-weight: 300;
+	}
+	&__label {
+	}
+	&__input {
+		input {
+			width: 100%;
+			background-color: rgb(255, 255, 255);
+			color: rgba(0, 0, 0, 0.75);
+			border: 1px solid rgba(0, 0, 0, 0.35);
+			border-radius: 5px;
+			padding: 8px 6.4px;
+			font-size: 15px;
+			transition: 0.3s;
+			&:focus {
+				border-color: rgb(45, 106, 161);
+			}
+		}
+	}
+	&__policy {
+		padding: 5px 10px 0;
+		font-size: 13px;
+		font-weight: 300;
+		text-align: center;
+		a {
+			border-bottom: 1px dashed #333;
+			color: #333;
 		}
 	}
 }

@@ -30,4 +30,43 @@ $(document).ready(function () {
 		});
 	};
 	countNumber($(".count-number"));
+
+  // Модальное окно
+	function modal() {
+		$('.modal-trigger').on('click', function(e) {
+      e.preventDefault();
+			var $this = $(this),
+					data = $this.data('modal'),
+					thisModal = $(data);
+			modalShow(thisModal);
+		});
+	};
+	// Открытие модального окна
+	function modalShow(thisModal) {
+		var modalClose = thisModal.find($('.modal__close'));
+    thisModal.addClass('open');
+		modalClose.on('click', function() {
+			modalHide(thisModal);
+		});
+		thisModal.on('click', function(e) {
+			if (thisModal.has(e.target).length === 0) {
+				modalHide(thisModal);
+			}
+		});
+	};
+	// Закрытие модального окна
+	function modalHide(thisModal) {
+		thisModal.removeClass('open');
+	};
+	modal();
+
+  // Maskedinput
+  $("div[data-type=phone] input, div[plp-field=phone] input").mask("+9?999999999999", { placeholder: " " });
+  $("div[data-type=phone] input").each(function () {
+    if ($(this).attr('value')) $(this).attr('placeholder', $(this).attr('value'))
+  })
+  $("[plp-field=phone] input").change(function () {
+    if ($(this).val() == '') $(this).closest('[plp-field=phone]').removeClass('is-filled'); else
+      $(this).closest('[plp-field=phone]').addClass('is-filled')
+  });
 });

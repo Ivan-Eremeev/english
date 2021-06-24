@@ -1,0 +1,29 @@
+.user {
+  padding: 5px;
+  border: 3px solid #fff;
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+  &__avatar {
+    width: 108px;
+    height: 108px;
+    margin-right: 10px;
+    img {
+      display: block;
+      border-radius: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__text {
+
+  }
+}
